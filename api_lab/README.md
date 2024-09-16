@@ -1,49 +1,27 @@
-A server app built using [Shelf](https://pub.dev/packages/shelf),
-configured to enable running with [Docker](https://www.docker.com/).
+## API Lab
 
-This sample code handles HTTP GET requests to `/` and `/echo/<message>`
+## Overview 📖
+We are supposed to build an api with some endpoints and routes.
 
-# Running the sample
+## Routes
+- Home `/`
+- Login `/login`
+- Movies `/movies`
+- Profile `/profile`
 
-## Running with the Dart SDK
+## Results
 
-You can run the example with the [Dart SDK](https://dart.dev/get-dart)
-like this:
+#### Home Route
+![login](./readme_media/home.png)
 
-```
-$ dart run bin/server.dart
-Server listening on port 8080
-```
+#### Login Route
+![login](./readme_media/login.png)
 
-And then from a second terminal:
-```
-$ curl http://0.0.0.0:8080
-Hello, World!
-$ curl http://0.0.0.0:8080/echo/I_love_Dart
-I_love_Dart
-```
+#### Movies Route
+![login](./readme_media/movies.png)
 
-## Running with Docker
+#### Profile Route
+![login](./readme_media/profile.png)
 
-If you have [Docker Desktop](https://www.docker.com/get-started) installed, you
-can build and run with the `docker` command:
-
-```
-$ docker build . -t myserver
-$ docker run -it -p 8080:8080 myserver
-Server listening on port 8080
-```
-
-And then from a second terminal:
-```
-$ curl http://0.0.0.0:8080
-Hello, World!
-$ curl http://0.0.0.0:8080/echo/I_love_Dart
-I_love_Dart
-```
-
-You should see the logging printed in the first terminal:
-```
-2021-05-06T15:47:04.620417  0:00:00.000158 GET     [200] /
-2021-05-06T15:47:08.392928  0:00:00.001216 GET     [200] /echo/I_love_Dart
-```
+## Conclusion
+This lab increased my knowledge in backend development and improved my skills.

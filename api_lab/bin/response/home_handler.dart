@@ -1,5 +1,5 @@
 import 'package:shelf/shelf.dart';
 
 homeHandler(Request req){
-  return Response.ok("Hello World !!");
+  return Response.ok("Welcome to Api Lab !!");
 }
