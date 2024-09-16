@@ -6,7 +6,7 @@ import '../handler/user_handler.dart';
 class UserRoute {
   Handler get route {
     final route = Router()
-      ..get("/myprofile", userHandler);
+      ..put("/myprofile", userHandler);
     return route.call;
   }
 }
