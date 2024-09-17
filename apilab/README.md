@@ -1,49 +1,17 @@
-A server app built using [Shelf](https://pub.dev/packages/shelf),
-configured to enable running with [Docker](https://www.docker.com/).
+# Dart Backend Server with Shelf
 
-This sample code handles HTTP GET requests to `/` and `/echo/<message>`
+This project is a simple backend server built using the Dart programming language and the Shelf package. It provides endpoints for user authentication and fetching movies data.
 
-# Running the sample
+## Features
 
-## Running with the Dart SDK
+- **Login User**: Authenticates a user with a username and password.
+- **Get User Profile**: Retrieves user profile information after login.
+- **Get Movies**: Returns a list of all movies as a JSON response.
 
-You can run the example with the [Dart SDK](https://dart.dev/get-dart)
-like this:
+<img width="658" alt="Screenshot 1446-03-14 at 4 17 01 AM" src="https://github.com/user-attachments/assets/6e7533bc-d963-4508-9b2a-37a2d81e9736">
 
-```
-$ dart run bin/server.dart
-Server listening on port 8080
-```
 
-And then from a second terminal:
-```
-$ curl http://0.0.0.0:8080
-Hello, World!
-$ curl http://0.0.0.0:8080/echo/I_love_Dart
-I_love_Dart
-```
+<img width="658" alt="Screenshot 1446-03-14 at 4 41 00 AM" src="https://github.com/user-attachments/assets/42addb93-5355-473a-8299-ef49d7e182ce">
 
-## Running with Docker
 
-If you have [Docker Desktop](https://www.docker.com/get-started) installed, you
-can build and run with the `docker` command:
-
-```
-$ docker build . -t myserver
-$ docker run -it -p 8080:8080 myserver
-Server listening on port 8080
-```
-
-And then from a second terminal:
-```
-$ curl http://0.0.0.0:8080
-Hello, World!
-$ curl http://0.0.0.0:8080/echo/I_love_Dart
-I_love_Dart
-```
-
-You should see the logging printed in the first terminal:
-```
-2021-05-06T15:47:04.620417  0:00:00.000158 GET     [200] /
-2021-05-06T15:47:08.392928  0:00:00.001216 GET     [200] /echo/I_love_Dart
-```
+<img width="658" alt="Screenshot 1446-03-14 at 4 43 12 AM" src="https://github.com/user-attachments/assets/81f5ca6f-31b9-4e28-bad1-f1c4c4fd3ddf">
