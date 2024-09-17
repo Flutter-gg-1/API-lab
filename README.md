@@ -1,19 +1,49 @@
-## Assignment: Backend Development using Dart and Shelf Package 
-In this assignment, you will create a backend server using Dart programming language and the Shelf package to handle HTTP requests and responses. The server will have endpoints to login user, display all movies. You should use the shelf_hotreload and json_webtoken packages to ensure good coding practices and ease of development.
+A server app built using [Shelf](https://pub.dev/packages/shelf),
+configured to enable running with [Docker](https://www.docker.com/).
 
-## Requirements:
-1. Create a Dart project and install the Shelf and shelf_hotreload packages.
-2. Create a "model" file to represent the user object with the required properties.
-3. Create a "model" file to represent the movies object with the required properties.
-4. Create a "routes" folder to contain the router handlers for each endpoint.
-5. Create a "response" folder to contain the handler methods for each endpoint.
-6. Implement an endpoint to logs in a user by providing authentication token.
-7. Implmenet an endpoint to retrieves the user profile information after login.
-8. Implement an endpoint to display all movies. This endpoint should return a JSON response containing all movie objects.
+This sample code handles HTTP GET requests to `/` and `/echo/<message>`
 
-## Grading Criteria:
-Code readability and documentation.
-Proper error handling.
+# Running the sample
 
-## Deadline
-Tuesday, 17sep, 10:00 am.
+## Running with the Dart SDK
+
+You can run the example with the [Dart SDK](https://dart.dev/get-dart)
+like this:
+
+```
+$ dart run bin/server.dart
+Server listening on port 8080
+```
+
+And then from a second terminal:
+```
+$ curl http://0.0.0.0:8080
+Hello, World!
+$ curl http://0.0.0.0:8080/echo/I_love_Dart
+I_love_Dart
+```
+
+## Running with Docker
+
+If you have [Docker Desktop](https://www.docker.com/get-started) installed, you
+can build and run with the `docker` command:
+
+```
+$ docker build . -t myserver
+$ docker run -it -p 8080:8080 myserver
+Server listening on port 8080
+```
+
+And then from a second terminal:
+```
+$ curl http://0.0.0.0:8080
+Hello, World!
+$ curl http://0.0.0.0:8080/echo/I_love_Dart
+I_love_Dart
+```
+
+You should see the logging printed in the first terminal:
+```
+2021-05-06T15:47:04.620417  0:00:00.000158 GET     [200] /
+2021-05-06T15:47:08.392928  0:00:00.001216 GET     [200] /echo/I_love_Dart
+```
