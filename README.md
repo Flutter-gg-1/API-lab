@@ -5,5 +5,7 @@ eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiYW5hcyIsImVtYWlsIjoiYW5hc0AuZ21
 
 # path:
 http://0.0.0.0:8080/movie/list/Movies
+
 http://0.0.0.0:8080/auth/login
+
 http://0.0.0.0:8080/auth/profile
