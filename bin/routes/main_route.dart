@@ -6,7 +6,13 @@ import '../response/retrieves_user_h.dart';
 
 class MainRoute {
   Handler get handler {
-    final routEndpoint = Router()..post("/login", loginUserHandler)..get("/retrieves", retrievesUserHandler)..get("/display/all", displayALLMoviesHandler);
+    final routEndpoint = Router()
+      ..post("/login", loginUserHandler)
+      ..get("/retrieves", retrievesUserHandler)
+      ..get(
+        "/display/all",
+        displayALLMoviesHandler,
+      );
     return routEndpoint.call;
   }
 }
