@@ -9,10 +9,7 @@ class MainRoute {
     final routEndpoint = Router()
       ..post("/login", loginUserHandler)
       ..get("/retrieves", retrievesUserHandler)
-      ..get(
-        "/display/all",
-        displayALLMoviesHandler,
-      );
+      ..get("/display/all/movies", displayALLMoviesHandler);
     return routEndpoint.call;
   }
 }

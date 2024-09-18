@@ -1,5 +1,10 @@
+import 'dart:convert';
+
 import 'package:shelf/shelf.dart';
 
-displayALLMoviesHandler (Response req){
-  return Response.ok("displayALLMoviesHandler");
+import '../data/data.dart';
+
+displayALLMoviesHandler(Response req) {
+  return Response.ok(jsonEncode(films.map((movie) => movie).toList()),
+      headers: {'Content-Type': 'application/json'});
 }
